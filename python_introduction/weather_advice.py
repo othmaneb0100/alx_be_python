@@ -1,13 +1,18 @@
-weather = input("Whats the weather like today? (sunny/cold/rainy):  ").strip.lower()
+# weather_advice.py
 
-match weather:
-   case  "sunny":
-     print("wear a t-shirt and sunglasses.")
-   case  "cold":
-     print("make sure to wear a warm coat and a scarf.")
-   case  "rainy":
-     print("dont forget your umbrella and a raincoat.")
-   case _:
-    print("sorry.")
+def get_weather_advice():
+    # Ask the user to input the current weather
+    weather = input("What's the weather like today? (sunny/rainy/cold): ").strip().lower()
+
+    # Provide clothing recommendations based on the input
+    if weather == "sunny":
+        print("Wear a t-shirt and sunglasses.")
+    elif weather == "rainy":
+        print("Don't forget your umbrella and a raincoat.")
+    elif weather == "cold":
+        print("Make sure to wear a warm coat and a scarf.")
+    else:
+        print("Sorry, I don't have recommendations for this weather.")
+
 if __name__ == "__main__":
     get_weather_advice()
