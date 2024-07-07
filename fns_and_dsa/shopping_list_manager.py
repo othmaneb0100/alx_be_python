@@ -8,6 +8,13 @@ def display_menu():
     print("4. Exit")
 
 def main():
+    # Check if display_menu function is defined
+    if 'display_menu' in globals() and callable(globals()['display_menu']):
+        print("display_menu function is defined and callable.")
+    else:
+        print("Error: display_menu function is not defined or not callable.")
+        return
+
     shopping_list = []
     while True:
         display_menu()
